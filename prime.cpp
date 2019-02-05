@@ -1,10 +1,6 @@
 // prime.cpp
 
 #include "prime.h"
-// #include <iostream>
-// #include <vector>
-// #include <ctime>
-// #include <cassert>
 
 using namespace std;
 
