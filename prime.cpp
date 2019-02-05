@@ -8,10 +8,10 @@
 using namespace std;
 
 // returns biggest integer d such that d*d <= n
-int isqrt(int n) {
-	if (n < 0) cmpt::error("isqrt: arg can't negative");
-	return int(sqrt(n));
-}
+// int isqrt(int n) {
+// 	if (n < 0) cmpt::error("isqrt: arg can't negative");
+// 	return int(sqrt(n));
+// }
 
 // returns all the trial divisors of n
 vector<int> trial_divisors(int n) {
