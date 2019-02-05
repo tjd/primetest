@@ -1,5 +1,5 @@
 language: cpp
-compiler: gcc
+compiler: gcc  # C++ 11
 os: linux
 script:
   - make primetest
