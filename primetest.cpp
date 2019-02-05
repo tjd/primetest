@@ -25,6 +25,7 @@ void is_composite_test() {
 	cout << "all is_composite tests passed\n";
 }
 
+// time to count all primes up to 10 million: 30.1744s
 void is_prime_time() {
 	cout << "Timing test for is_prime ...\n";
 	clock_t start = clock();

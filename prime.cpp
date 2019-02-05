@@ -1,21 +1,36 @@
 // prime.cpp
 
 #include "prime.h"
+#include "cmpt_error.h"
+#include <cmath>
+#include <vector>
 
 using namespace std;
+
+// returns biggest integer d such that d*d <= n
+int isqrt(int n) {
+	if (n < 0) cmpt::error("isqrt: arg can't negative");
+	return int(sqrt(n));
+}
+
+// returns all the trial divisors of n
+vector<int> trial_divisors(int n) {
+	if (n < 2) {
+		return vector<int>{};
+	} else {
+		vector<int> divs{2};
+		for(int d = 3; d*d <= n; d++) {
+			divs.push_back(d);
+		}
+		return divs;
+	}
+}
 
 bool is_prime(int n) {
     if (n < 2) return false;       // 2 is the smallest prime
     if (n == 2) return true;       // 2 is the only even prime
-    if (n % 2 == 0) return false;  // all other even numbers are not prime
-    
-    // Next we generate trial divisors, d, starting with 3. We increment d by
-    // 2 each time because we know by this point in the function that n is
-    // odd, and so there is no need to check even divisors.
-    int d = 3; 
-    while (d * d <= n) {
-        if (n % d == 0) return false;
-        d += 2;
+    for(int d : trial_divisors(n)) {
+    	if (n % d == 0) return false;
     }
     return true;
 }
