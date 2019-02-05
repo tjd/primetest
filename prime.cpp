@@ -25,6 +25,10 @@ bool is_prime(int n) {
     return true;
 }
 
+bool is_composite(int n) {
+	return n > 1 && !is_prime(n);
+}
+
 int num_primes_less_than(int n) {
 	int num_primes = 0;
 	for(int i = 1; i < n; i++) {
