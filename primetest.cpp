@@ -9,7 +9,7 @@ using namespace std;
 #include <cassert>
 
 void is_prime_test() {
-	vector<int> some_primes = {2, 3, 5, 7, 11, 23, 31, 37, 101, 103};
+	vector<int> some_primes = {1, 2, 3, 5, 7, 11, 23, 31, 37, 101, 103};
 	vector<int> some_non_primes = {-1, 0, 1, 4, 6, 8, 9, 10, 26, 169};
 	for(int p : some_primes) assert(is_prime(p));
 	for(int c : some_non_primes) assert(!is_prime(c));
