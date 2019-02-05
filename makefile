@@ -27,9 +27,5 @@ primetest: primetest.o prime.o
 
 prime.o: prime.cpp prime.h
 
-# tool.o: tool.cc support.hh
-
-# support.o: support.hh support.cc
-
 clean:
 	rm -f prime.o primetest.o primetest
