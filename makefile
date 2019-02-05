@@ -16,7 +16,7 @@
 #    unsigned numbers
 #   -Wnon-virtual-dtor warns about non-virtual destructors
 #   -g puts debugging info into the executables (makes them larger)
-CPPFLAGS = -O3 -std=c++14 -Wall -Wextra -Werror -Wfatal-errors -Wno-sign-compare -Wnon-virtual-dtor -g
+CPPFLAGS = -O3 -std=c++11 -Wall -Wextra -Werror -Wfatal-errors -Wno-sign-compare -Wnon-virtual-dtor -g
 
 all: primetest
 
