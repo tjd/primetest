@@ -4,6 +4,9 @@
 
 using namespace std;
 
+//
+// Returns true if n is a prime number, and false otherwise.
+//
 bool is_prime(int n) {
     if (n < 2) return false;       // 2 is the smallest prime
     if (n == 2) return true;       // 2 is the only even prime
@@ -20,14 +23,17 @@ bool is_prime(int n) {
     return true;
 }
 
+//
+// Returns true if n is a composite number, and false otherwise.
+//
 bool is_composite(int n) {
-	return n > 1 && !is_prime(n);
+   return n > 1 && !is_prime(n);
 }
 
 int num_primes_less_than(int n) {
-	int num_primes = 0;
-	for(int i = 1; i < n; i++) {
-		if (is_prime(i)) num_primes++;
-	}
-	return num_primes;
+   int num_primes = 0;
+   for(int i = 1; i < n; i++) {
+      if (is_prime(i)) num_primes++;
+   }
+   return num_primes;
 }
